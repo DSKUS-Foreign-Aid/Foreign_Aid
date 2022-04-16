@@ -14,6 +14,7 @@ class API_DOWNLOADER():
         self.idct = INDICATOR
         self.folder =  f'{FILE_DIR}/downloads'
         self.dir = f'{self.folder}/{self.idct}'
+        self.csv_file = f'{self.dir}/{self.idct}.csv'
         
         self.api_download()
         self.change_csv_file_name()
@@ -32,18 +33,18 @@ class API_DOWNLOADER():
         print('Download Done')
         
         with zipfile.ZipFile(zip_file, 'r') as z:
-            z.extractall(f'{self.dir}')
+            z.extractall(self.dir)
                 
     
     def change_csv_file_name(self):     
-        names = os.listdir(f'{self.dir}')
-        os.rename(f'{self.dir}/{names[0]}', f'{self.dir}/{self.idct}.csv')
+        names = os.listdir(self.dir)
+        os.rename(f'{self.dir}/{names[0]}', self.csv_file)
         
         print('File has been renamed')
 
 
     def change_colunm_name(self):
-        df = pd.read_csv(f'{self.dir}/{self.idct}.csv', header=2)
+        df = pd.read_csv(self.csv_file, header=2)
         del df['Unnamed: 65']
 
         new_names = {
@@ -54,7 +55,7 @@ class API_DOWNLOADER():
                 }
 
         df.rename(columns=new_names, inplace=True)
-        df.to_csv(f'{self.dir}/{self.idct}.csv', mode='w')        
+        df.to_csv(self.csv_file, mode='w')        
 
         print('Columns has been renamed & updated csv file')
 
@@ -65,11 +66,10 @@ if __name__ == "__main__":
         print(sys.argv)
         print('INDICATOR, FILE_DIR are required')
 
-    else :
-
+    else:
         indicator = (sys.argv[1])
         file_dir = (sys.argv[2])
 
-        downloader = API_DOWNLOADER(indicator, file_dir)
+        API_DOWNLOADER(indicator, file_dir)
         
     # e.g. python api_downloader.py AG.AGR.TRAC.NO ./test
