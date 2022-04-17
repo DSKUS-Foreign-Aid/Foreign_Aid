@@ -1,0 +1,52 @@
+Series_Codes,Series_Names,New_Series_Names
+NV.AGR.TOTL.ZS,"Agriculture, forestry, and fishing, value added (% of GDP)",AggForestFish_PctGDP
+GC.DOD.TOTL.GD.ZS,"Central government debt, total (% of GDP)",GovtDebt_Total
+NY.GDP.COAL.RT.ZS,Coal rents (% of GDP),CoalRents_PctGDP
+SH.XPD.CHEX.GD.ZS,Current health expenditure (% of GDP),HealthExp_PctGDP
+FS.AST.PRVT.GD.ZS,Domestic credit to private sector (% of GDP),Cred2Private_PctGDP
+SH.XPD.GHED.GD.ZS,Domestic general government health expenditure (% of GDP),GovtHealth_PctGDP
+NE.EXP.GNFS.ZS,Exports of goods and services (% of GDP),ExportsGoodServices_PctGDP
+NE.CON.TOTL.ZS,Final consumption expenditure (% of GDP),FinalConsumpExp_PctGDP
+BM.KLT.DINV.WD.GD.ZS,"Foreign direct investment, net outflows (% of GDP)",ForeignInvstOutflow_PctGDP
+NY.GDP.MKTP.KD,GDP (constant 2015 US$),GDP_2015USD
+NY.GDP.MKTP.CN,GDP (current LCU),GDP_LCU
+NY.GDP.MKTP.KD.ZG,GDP growth (annual %),GDP_PctGrowth
+NY.GDP.PCAP.KN,GDP per capita (constant LCU),PerCapita_GDP_LCU
+NY.GDP.PCAP.CD,GDP per capita (current US$),PerCapita_GDP_USD
+SL.GDP.PCAP.EM.KD,GDP per person employed (constant 2017 PPP $),PerEmployed_GDP_2017PPP
+EG.GDP.PUSE.KO.PP,GDP per unit of energy use (PPP $ per kg of oil equivalent),EnergyUnit_GDP_PPP
+NE.CON.GOVT.ZS,General government final consumption expenditure (% of GDP),GovtConsumption_PctGDP
+NY.GDS.TOTL.ZS,Gross domestic savings (% of GDP),DomSavings_PctGDP
+NY.GNS.ICTR.ZS,Gross savings (% of GDP),Savings_PctGDP
+NE.IMP.GNFS.ZS,Imports of goods and services (% of GDP),ImportGoodService_PctGDP
+NY.GDP.DEFL.KD.ZG,"Inflation, GDP deflator (annual %)",Inflation_Pct
+NV.IND.MANF.ZS,"Manufacturing, value added (% of GDP)",Manufacturing_PctGDP
+TG.VAL.TOTL.GD.ZS,Merchandise trade (% of GDP),MerchTrade_PctGDP
+NY.GDP.MINR.RT.ZS,Mineral rents (% of GDP),Mineral_PctGDP
+NY.GDP.NGAS.RT.ZS,Natural gas rents (% of GDP),NatGas_PctGDP
+GC.NLD.TOTL.GD.ZS,Net lending (+) / net borrowing (-) (% of GDP),Lend(+)Borrow(-)_PctGDP
+BX.TRF.PWKR.DT.GD.ZS,"Personal remittances, received (% of GDP)",Remittance_PctGDP
+GC.REV.XGRT.GD.ZS,"Revenue, excluding grants (% of GDP)",RevenueExGrants_PctGDP
+CM.MKT.TRAD.GD.ZS,"Stocks traded, total value (% of GDP)",StocksTraded_PctGDP
+NY.GDP.TOTL.RT.ZS,Total natural resources rents (% of GDP),NatResourcRents_PctGDP
+BG.GSR.NFSV.GD.ZS,Trade in services (% of GDP),InServiceTrade_PctGDP
+FM.LBL.BMNY.GD.ZS,Broad money (% of GDP),BroadMoney_PctGDP
+BN.CAB.XOKA.GD.ZS,Current account balance (% of GDP),CurrentAcctBal_PctGDP
+FS.AST.DOMS.GD.ZS,Domestic credit provided by financial sector (% of GDP),CreditByFin_PctGDP
+FD.AST.PRVT.GD.ZS,Domestic credit to private sector by banks (% of GDP),CreditByBanks_PctGDP
+GC.XPN.TOTL.GD.ZS,Expense (% of GDP),Expense_PctGDP
+BX.KLT.DINV.WD.GD.ZS,"Foreign direct investment, net inflows (% of GDP)",ForeignInvstInflow_PctGDP
+NY.GDP.FRST.RT.ZS,Forest rents (% of GDP),ForestRents_PctGDP
+NY.GDP.MKTP.KN,GDP (constant LCU),GDP_LCU
+NY.GDP.MKTP.CD,GDP (current US$),GDP_USD
+NY.GDP.PCAP.KD,GDP per capita (constant 2015 US$),PerCapita_GDP_2015USD
+NY.GDP.PCAP.CN,GDP per capita (current LCU),PerCapita_GDP_LCU
+NY.GDP.PCAP.KD.ZG,GDP per capita growth (annual %),GDPGrowth_Pct
+SE.XPD.TOTL.GD.ZS,"Government expenditure on education, total (% of GDP)",EducExp_PctGDP
+NV.IND.TOTL.ZS,"Industry (including construction), value added (% of GDP)",Industry_PctGDP
+MS.MIL.XPND.GD.ZS,Military expenditure (% of GDP),Defense_PctGDP
+NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),OilRents_PctGDP
+GB.XPD.RSDV.GD.ZS,Research and development expenditure (% of GDP),RnD_PctGDP
+NV.SRV.TOTL.ZS,"Services, value added (% of GDP)",Services_PctGDP
+NE.TRD.GNFS.ZS,Trade (% of GDP),Trade_PctGDP
+GC.TAX.TOTL.GD.ZS,Tax revenue (% of GDP),TaxRev_PctGDP
