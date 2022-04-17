@@ -21,28 +21,29 @@ class API_DOWNLOADER():
         self.flag = False
         
     def api_download(self):        
+        
         try:
             os.makedirs(f'{self.folder}')      
         except:
             pass
         
-        url = f'http://api.worldbank.org/v2/country/{self.ctr}/indicator/{self.idct}/?source=2&downloadformat=csv&dataformat=table'
+        url = f'http://api.worldbank.org/v2/country/{self.ctr}/indicator/{self.idct}/?downloadformat=csv&dataformat=table'
         zip_file = f'{self.folder}/{self.idct}.zip'
         request.urlretrieve(url, zip_file)
-        print('Download Done')
         
         with zipfile.ZipFile(zip_file, 'r') as z:
             z.extractall(self.folder)
     
-    def change_csv_file_name(self):     
+    def delete_item(self):
         
         metadata_files = os.path.join(self.folder, "Metadata*.csv")
-        
         [os.remove(f) for f in glob.glob(metadata_files)]
         [os.remove(f) for f in glob.glob(f'{self.folder}/*.zip')]
-
+    
+    def change_csv_file_name(self):     
+               
         names = os.listdir(self.folder)
-        
+
         try:
             os.rename(f'{self.folder}/{names[0]}', self.csv_file)
         except:
@@ -51,8 +52,8 @@ class API_DOWNLOADER():
         
         shutil.rmtree(f'{self.folder}')
         
-        
     def change_colunm_name(self):
+        
         if self.flag:
             pass 
         else:
@@ -69,30 +70,32 @@ class API_DOWNLOADER():
             df.rename(columns=new_names, inplace=True)
             df.to_csv(self.csv_file, mode='w')        
 
-    def append_to_csv(self):
+    def merge_csv(self):
+        
         # merging the files
         files_joined = os.path.join( f'{self.dir}', "*.csv")
         
         list_files = glob.glob(files_joined)
-        list_files.append(self.existing_csv_file)
         
         df = pd.concat(map(pd.read_csv, list_files), ignore_index=True)
         del df['Unnamed: 0']
         
-        df.to_csv(self.existing_csv_file, mode='w')
+        df.to_csv(f'{self.dir}/merged.csv', mode='w')
 
     def operate(self):
 
         if self.existing_csv_file:
             self.api_download()
+            self.delete_item()
             self.change_csv_file_name()
             self.change_colunm_name()
-            self.append_to_csv()
             
         else:
             self.api_download()
+            self.delete_item()
             self.change_csv_file_name()
             self.change_colunm_name()
+            # self.merge_csv()
 
 
 # if __name__ == "__main__":
