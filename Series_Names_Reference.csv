@@ -9,7 +9,7 @@ NE.EXP.GNFS.ZS,Exports of goods and services (% of GDP),ExportsGoodServices_PctG
 NE.CON.TOTL.ZS,Final consumption expenditure (% of GDP),FinalConsumpExp_PctGDP
 BM.KLT.DINV.WD.GD.ZS,"Foreign direct investment, net outflows (% of GDP)",ForeignInvstOutflow_PctGDP
 NY.GDP.MKTP.KD,GDP (constant 2015 US$),GDP_2015USD
-NY.GDP.MKTP.CN,GDP (current LCU),GDP_LCU
+NY.GDP.MKTP.CN,GDP (current LCU),GDP_LCU_current
 NY.GDP.MKTP.KD.ZG,GDP growth (annual %),GDP_PctGrowth
 NY.GDP.PCAP.KN,GDP per capita (constant LCU),PerCapita_GDP_LCU
 NY.GDP.PCAP.CD,GDP per capita (current US$),PerCapita_GDP_USD
@@ -40,7 +40,7 @@ NY.GDP.FRST.RT.ZS,Forest rents (% of GDP),ForestRents_PctGDP
 NY.GDP.MKTP.KN,GDP (constant LCU),GDP_LCU
 NY.GDP.MKTP.CD,GDP (current US$),GDP_USD
 NY.GDP.PCAP.KD,GDP per capita (constant 2015 US$),PerCapita_GDP_2015USD
-NY.GDP.PCAP.CN,GDP per capita (current LCU),PerCapita_GDP_LCU
+NY.GDP.PCAP.CN,GDP per capita (current LCU),PerCapita_GDP_LCU_current
 NY.GDP.PCAP.KD.ZG,GDP per capita growth (annual %),GDPGrowth_Pct
 SE.XPD.TOTL.GD.ZS,"Government expenditure on education, total (% of GDP)",EducExp_PctGDP
 NV.IND.TOTL.ZS,"Industry (including construction), value added (% of GDP)",Industry_PctGDP
