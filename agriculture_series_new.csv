@@ -14,7 +14,7 @@ AG.LND.EL5M.RU.ZS,Rural land area where elevation is below 5 meters (% of total 
 AG.LND.FRST.K2,Forest area (sq. km),Forest_sqkm
 AG.LND.FRST.ZS,Forest area (% of land area),Forest_pctLand
 AG.LND.IRIG.AG.ZS,Agricultural irrigated land (% of total agricultural land),IrrigatedLand_pctAgriLand
-AG.LND.PRCP.MM,Average precipitation in depth (mm per year),PercipiAvg_mmYear
+AG.LND.PRCP.MM,Average precipitation in depth (mm per year),PrecipiAvg_mmYear
 AG.LND.TOTL.K2,Land area (sq. km),Land_sqkm
 AG.LND.TOTL.RU.K2,Rural land area (sq. km),RuralLand_sqkm
 AG.LND.TRAC.ZS,"Agricultural machinery, tractors per 100 sq. km of arable land",TractorsPer100sqkm_num
