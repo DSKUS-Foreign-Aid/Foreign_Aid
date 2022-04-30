@@ -10,13 +10,13 @@ from urllib import request
 # Get data from 'World Development Indicators' dataset
 class API_DOWNLOADER():
 
-    def __init__(self, INDICATOR, FILE_DIR, existing_csv = None):
+    def __init__(self, indicator, file_dir, countries='', existing_csv = None):
         
-        self.ctr = 'BOL;CRI;DMA;SLV;GUY;PAN;URY;SUR;ARG;BRA;CHL;MEX;PRY;BLZ;COL;ECU;GTM;HND;NIC;PER;KOR'
-        self.idct = INDICATOR
-        self.dir = FILE_DIR
-        self.folder =  f'{FILE_DIR}/{self.idct}'
-        self.csv_file = f'{FILE_DIR}/{self.idct}.csv'
+        self.idct = indicator
+        self.dir = file_dir
+        self.ctr = countries
+        self.folder =  f'{file_dir}/{self.idct}'
+        self.csv_file = f'{file_dir}/{self.idct}.csv'
         self.existing_csv_file = existing_csv
         self.flag = False
         
@@ -34,7 +34,7 @@ class API_DOWNLOADER():
         with zipfile.ZipFile(zip_file, 'r') as z:
             z.extractall(self.folder)
     
-    def delete_item(self):
+    def delete_metadata(self):
         
         metadata_files = os.path.join(self.folder, "Metadata*.csv")
         [os.remove(f) for f in glob.glob(metadata_files)]
@@ -55,10 +55,10 @@ class API_DOWNLOADER():
     def change_colunm_name(self):
         
         if self.flag:
+            print('pass')
             pass 
         else:
             df = pd.read_csv(self.csv_file, header=2)
-            del df['Unnamed: 65']
 
             new_names = {
                         'Country Name' : 'Country_Name',
@@ -86,13 +86,13 @@ class API_DOWNLOADER():
 
         if self.existing_csv_file:
             self.api_download()
-            self.delete_item()
+            self.delete_metadata()
             self.change_csv_file_name()
             self.change_colunm_name()
             
         else:
             self.api_download()
-            self.delete_item()
+            self.delete_metadata()
             self.change_csv_file_name()
             self.change_colunm_name()
             # self.merge_csv()
